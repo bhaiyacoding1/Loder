@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loder</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            /* aspect-ratio: 1; */
+            display: grid;
+            place-items: center;
+            background-color: black;
+        }
+        .loder{
+            width: 50vh;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: rgb(128, 0, 51);
+            position: relative;
+            animation: loderani 2s linear infinite reverse;
+
+        }
+        .loder::before{
+            content: "";
+            width: 40vh;
+            aspect-ratio: 1;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        .loder::after{
+            content: "";
+            width: 10vh;
+            aspect-ratio: 1;
+            background-color: rgb(128, 0, 51);
+            border-radius: 50%;
+            position: absolute;
+            top: -2rem;
+            left: 10rem;
+            box-shadow: 0 0 1rem rgb(128, 0, 51), 0 0 1.5rem rgb(128, 0, 51), 0 0 2rem rgb(128, 0, 51), 0 0 2.5rem rgb(128, 0, 51), 0 0 3rem rgb(128, 0, 51);
+
+        }
+        @keyframes loderani{
+            100%{
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loder">
+
+    </div>
+</body>
+</html>
